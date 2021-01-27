@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ModernLogin</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="new_user">New user? Register Now</string>
+    <string name="use_other_methods">Use other Methods</string>
+    <string name="already_have_an_account">Already \nhave an \nAccount?</string>
+    <string name="heres_your_first_step_with_us">Here’s\nyour first\nstep with \nus!</string>
+    <string name="register">Register</string>
+</resources>
