@@ -2,20 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ECE8E8">
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logoSplash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/logo" />
+        android:src="@drawable/logo" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+    <TextView
+        android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-black"
+        android:foregroundTint="#FFFFFF"
+        android:text="@string/loading"
+        android:textColor="#11B7EE"
+        android:textSize="36sp" />
 </RelativeLayout>
