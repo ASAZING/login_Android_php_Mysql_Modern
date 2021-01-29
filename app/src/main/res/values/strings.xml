@@ -11,4 +11,8 @@
     <string name="heres_your_first_step_with_us">Here’s\nyour first\nstep with \nus!</string>
     <string name="register">Register</string>
     <string name="loading">Loading...</string>
+    <string name="title_activity_dashboard">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

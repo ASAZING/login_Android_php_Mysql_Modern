@@ -3,11 +3,6 @@
     package="com.asazing.loginui">
     <!-- permission -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,11 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginUI"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"></activity>
-        <!-- Android 6.0 introduced the useCleartextTraffic attribute under application element in android manifest. The default value in Android P is “false”. Setting this to true indicates that the app intends to use clear network traffic. -->
-        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".Dashboard"
+            android:label="@string/title_activity_dashboard"></activity>
+        <activity android:name=".MainActivity" /> <!-- Android 6.0 introduced the useCleartextTraffic attribute under application element in android manifest. The default value in Android P is “false”. Setting this to true indicates that the app intends to use clear network traffic. -->
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".Splash"
+        <activity
+            android:name=".Splash"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

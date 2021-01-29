@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.home.HomeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F2F2F2"
+                    app:elevation="0dp">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:title="Dashboard Wallet"
+                        app:titleTextColor="#0288D1"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        app:contentInsetStartWithNavigation="0dp"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                        />
+                </com.google.android.material.appbar.AppBarLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="#03a9f4"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="0dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:gravity="center_vertical"
+                                    android:text="My Wallet"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="#B3E5FC" />
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:src="@drawable/ic_baseline_add_24"
+                                    android:tint="#B3E5FC">
+                                </ImageButton>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="10dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Balance"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="#E1F5FE" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="242.232"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USD"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="#81DAFA" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+                                <RelativeLayout
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp">
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/shape_default"
+                                        app:tint="#E6E6E6"/>
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_centerInParent="true"
+                                        android:rotation="180"
+                                        android:src="@drawable/ic_baseline_arrow_downward_24"
+                                        app:tint="#999999"/>
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="0dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Send"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="#1A237E"
+                                    android:fontFamily="sans-serif-medium"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="0dp"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+                                <RelativeLayout
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp">
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/shape_default"
+                                        app:tint="#E6E6E6"/>
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_baseline_arrow_downward_24"
+                                        app:tint="#999999"/>
+                                </RelativeLayout>
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="0dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Receive"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="#1A237E"
+                                    android:fontFamily="sans-serif-medium"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:text="Today"
+                        android:textColor="#999999"
+                        android:fontFamily="sans-serif-medium" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/shape_default"
+                                    app:tint="#E6E6E6"/>
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    app:tint="#999999"
+                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="0dp"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Receive"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#1A237E"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="29 oct 19 15:00"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                    android:textColor="#999999"
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10 USB"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="#03A9FA"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Andy"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/shape_default"
+                                    app:tint="#E6E6E6"/>
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    app:tint="#999999"
+                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="0dp"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Receive"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#1A237E"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="29 oct 19 15:00"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                    android:textColor="#999999"
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10 USB"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="#03A9FA"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Andy"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/shape_default"
+                                    app:tint="#E6E6E6"/>
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    app:tint="#999999"
+                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="0dp"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Receive"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#1A237E"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="29 oct 19 15:00"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                    android:textColor="#999999"
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.000 USB"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="#03A9FA"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Albert"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/shape_default"
+                                    app:tint="#E6E6E6"/>
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    app:tint="#999999"
+                                    android:rotation="180"
+                                    android:src="@drawable/ic_baseline_arrow_downward_24"/>
+
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="0dp"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sent"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#1A237E"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="29 oct 19 15:00"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                    android:textColor="#999999"
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="100 USB"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="#03A9FA"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Box"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textColor="#999999"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</LinearLayout>

@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
-                    Intent intent= new Intent(getApplicationContext(), HomeActivity.class);
+                    Intent intent= new Intent(getApplicationContext(), Dashboard.class);
                     startActivity(intent);
                 }else{
                     Toast.makeText(MainActivity.this, "Usuario o contraseña INCORRECTA", Toast.LENGTH_SHORT).show();
