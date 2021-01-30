@@ -50,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void onRegisterClick(View view){
-        register("http://192.168.1.11/api/login/register.php");
+        register("http://192.168.1.14/api/login/register.php");
     }
 
     private void register(String URL){

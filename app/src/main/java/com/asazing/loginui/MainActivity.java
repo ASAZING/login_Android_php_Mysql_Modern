@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLoginAuth(View View){
-        auth("http://192.168.1.11/api/login/auth.php");
+        auth("http://192.168.1.14/api/login/auth.php");
     }
 
 
