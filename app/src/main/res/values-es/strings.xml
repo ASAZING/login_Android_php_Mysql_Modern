@@ -12,4 +12,8 @@
     <string name="heres_your_first_step_with_us">¡Aquí tienes \ntu primer \npaso con \nNosotros!</string>
     <string name="register">Registrar</string>
     <string name="loading">Cargando...</string>
+    <string name="title_activity_dashboard">MainActivity</string>
+    <string name="title_security">Seguridad</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_copy">Copiar</string>
 </resources>

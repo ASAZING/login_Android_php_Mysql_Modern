@@ -23,13 +23,7 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="sans-serif-black"
         android:foregroundTint="@color/teal_700"
-        android:text="Tu Cuentas Esta Segura al 100%"
+        android:text="Tu Cuenta Esta Segura al 100%"
         android:textColor="#02669D"
         android:textSize="24sp" />
-
-    <ImageView
-        android:id="@+id/logocheck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/check"/>
 </LinearLayout>

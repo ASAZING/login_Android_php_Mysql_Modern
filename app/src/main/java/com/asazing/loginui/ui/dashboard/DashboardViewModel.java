@@ -1,19 +1,22 @@
 package com.asazing.loginui.ui.dashboard;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+import static androidx.core.content.ContextCompat.getSystemService;
 
-    private MutableLiveData<String> mText;
+
+public class DashboardViewModel extends ViewModel{
+
+ClipboardManager clipboardManager;
 
     public DashboardViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("3");
+
+
     }
 
-    public LiveData<String> getText() {
-        return mText;
-    }
+
 }
