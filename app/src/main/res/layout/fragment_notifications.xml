@@ -5,25 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ECE8E8">
+    android:layout_margin="15dp">
 
-    <ImageView
-        android:id="@+id/logosecurity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/security"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Recovery"
+            android:textColor="#000000"
+            android:textSize="24sp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Writhe Down Your Recovery"
+            android:textColor="#090909"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="false"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="sans-serif-black"
-        android:foregroundTint="@color/teal_700"
-        android:text="Tu Cuenta Esta Segura al 100%"
-        android:textColor="#02669D"
-        android:textSize="24sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:text="Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen."
+            android:textColor="#757575" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey">
+
+                <GridView
+                    android:id="@+id/simpleGridView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="2"/>
+
+        </RelativeLayout>
 </LinearLayout>
