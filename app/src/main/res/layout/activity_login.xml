@@ -121,10 +121,10 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_facebook" />
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
                     android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_google_plus" />
+                    android:src="@drawable/ic_google" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

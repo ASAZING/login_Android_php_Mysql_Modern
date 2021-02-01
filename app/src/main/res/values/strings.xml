@@ -1,33 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ModernLogin</string>
-    <string name="name">Name</string>
-    <string name="last_name">Last Name</string>
-    <string name="email_hint">Email</string>
-    <string name="password_hint">Password</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="new_user">New user? Register Now</string>
-    <string name="use_other_methods">Use other Methods</string>
-    <string name="already_have_an_account">Already \nhave an \nAccount?</string>
-    <string name="heres_your_first_step_with_us">Here’s\nyour first\nstep with \nus!</string>
-    <string name="register">Register</string>
-    <string name="loading">Loading...</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="email_hint">Correo</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="forgot_password">¿Olvide mi Contraseña?</string>
+    <string name="new_user">¿Nuevo Usuario? Regístrate Ahora</string>
+    <string name="use_other_methods">Utilice otros Métodos</string>
+    <string name="already_have_an_account">¿Ya tienes \nuna Cuenta?</string>
+    <string name="heres_your_first_step_with_us">¡Aquí tienes \ntu primer \npaso con \nNosotros!</string>
+    <string name="register">Registrar</string>
+    <string name="loading">Cargando...</string>
     <string name="title_activity_dashboard">MainActivity</string>
-    <string name="title_security">Security</string>
+    <string name="title_security">Seguridad</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_copy">Copy</string>
-
-    <string-array name="array_technology">
-        <item>Android</item>
-        <item>Java</item>
-        <item>Php</item>
-        <item>Hadoop</item>
-        <item>Sap</item>
-        <item>Python</item>
-        <item>Ajax</item>
-        <item>C++</item>
-        <item>Ruby</item>
-        <item>Rails</item>
-        <item>.Net</item>
-        <item>Perl</item>
-    </string-array>
+    <string name="title_copy">Copiar</string>
 </resources>
