@@ -11,7 +11,6 @@ import static androidx.core.content.ContextCompat.getSystemService;
 
 public class DashboardViewModel extends ViewModel{
 
-ClipboardManager clipboardManager;
 
     public DashboardViewModel() {
 

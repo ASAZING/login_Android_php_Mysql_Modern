@@ -24,8 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    EditText inputEmail, inputPass;
-    Button btnLogin;
+    EditText inputEmail, inputPass; // Declaro las varibles para los Editext de la pagina de login
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,42 +33,45 @@ public class MainActivity extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
-        inputEmail = findViewById(R.id.inputEmailLogin);
-        inputPass = findViewById(R.id.inputPasswordLogin);
+        getSupportActionBar().hide(); // Oculto la ActionBar
+        inputEmail = findViewById(R.id.inputEmailLogin); // Le asigono un elemento a la variable inputEmail
+        inputPass = findViewById(R.id.inputPasswordLogin); // Le asigono un elemento a la variable inputPass
     }
 
-    public void onLoginClick(View View){
-        startActivity(new Intent(this,RegisterActivity.class));
-        overridePendingTransition(R.anim.slide_in_right,R.anim.stay);
+    public void onLoginClick(View View){ // Metodo para lanzar Activity registro de usuario
+        startActivity(new Intent(this,RegisterActivity.class)); // inicio la actividad
+        overridePendingTransition(R.anim.slide_in_right,R.anim.stay); // Doy animacion al cambio de actividad
     }
 
-    public void onLoginAuth(View View){
-        auth("http://192.168.1.14/api/login/auth.php");
+    public void onLoginAuth(View View){ // Metodo para la autentificacion de usuario y contraseña
+        if (!inputEmail.getText().toString().isEmpty() && !inputPass.getText().toString().isEmpty()) { // Valido que los campos no esten bacios
+            auth("http://192.168.1.14/api/login/auth.php"); // LLamo al metodo auth y le envio la url del api
+        }else{ // Si alguno de los dos campos esta bacio lanzara el Toast con el siguiente mensaje
+            Toast.makeText(MainActivity.this, "Ingrese Todos Los Campos", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
-    private void auth(String URL){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+    private void auth(String URL){ // Metodo de autentificacion que recibe la URL del api
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() { // Solicito una respuesta en String Mediante La URL Proporcionada
             @Override
-            public void onResponse(String response) {
-                if(!response.isEmpty()){
-                    Intent intent= new Intent(getApplicationContext(), Dashboard.class);
-                    startActivity(intent);
-                }else{
-                    Toast.makeText(MainActivity.this, "Usuario o contraseña INCORRECTA", Toast.LENGTH_SHORT).show();
-                }
-
+            public void onResponse(String response) { // Metodo de solicitud personalizada
+                    if(!response.isEmpty()){
+                        Intent intent= new Intent(getApplicationContext(), Dashboard.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(MainActivity.this, "Usuario o contraseña INCORRECTA", Toast.LENGTH_SHORT).show();
+                    }
             }
         }, new Response.ErrorListener(){
-            public void onErrorResponse(VolleyError error){
+            public void onErrorResponse(VolleyError error){ // Respuesta ante error en la conexion
                 System.out.println("Error : " + error.toString() );
                 Toast.makeText(MainActivity.this, "Error: " + error.toString(), Toast.LENGTH_SHORT).show();
             }
 
         }){
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
+            protected Map<String, String> getParams() throws AuthFailureError { // Metodo para obtener los parametros d
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("email", inputEmail.getText().toString());
                 params.put("pass", inputPass.getText().toString());
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        requestQueue.add(stringRequest); // Agrego la solicitud a RequestQueu
     }
 
 

@@ -16,7 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.asazing.loginui.Dashboard;
 import com.asazing.loginui.R;
 
 
@@ -30,7 +29,6 @@ public class DashboardFragment extends Fragment implements ClipboardManager.OnPr
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         handler = new Handler();
         clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
 
@@ -61,8 +59,7 @@ public class DashboardFragment extends Fragment implements ClipboardManager.OnPr
 
     }
 
-    public void copyText(String text)
-    {
+    public void copyText(String text) { // Metodopara copiar texto
         try {
             ClipData clip = ClipData.newPlainText("text",  text);
             clipboard.setPrimaryClip(clip);
