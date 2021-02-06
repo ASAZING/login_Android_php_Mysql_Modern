@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,10 +22,17 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
+    private static final String TAG = "Error Ip";
     EditText inputNameR, inputLastNameR, inputEmailR, inputPassword;
 
     @Override
@@ -49,7 +59,13 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void onRegisterClick(View view){
-        register("http://192.168.1.14/api/login/register.php");
+        if (!isEmptyText(inputNameR) && !isEmptyText(inputLastNameR) && !isEmptyText(inputEmailR) && !isEmptyText(inputPassword)) {
+            if (isEmail(inputEmailR.getText().toString())){
+                register("http://192.168.1.13/api/login/register.php");
+            }
+        }else{
+            Toast.makeText(RegisterActivity.this, "Ingrese Todos Los Campos", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void register(String URL){
@@ -79,10 +95,53 @@ public class RegisterActivity extends AppCompatActivity {
                 params.put("lastname", inputLastNameR.getText().toString());
                 params.put("email", inputEmailR.getText().toString());
                 params.put("pass", inputPassword.getText().toString());
+                params.put("ip", getIP());
                 return params;
             }
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+
+    //metodo para validar si es un email
+    public  boolean isEmail(String email) {
+        if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            return true;
+        } else {
+            Toast.makeText(RegisterActivity.this, "Ingrese un correo valido", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
+    //metodo para validar si editext esta vacio
+    public  boolean isEmptyText(EditText str){
+        String values = str.getText().toString().trim();
+        if(TextUtils.isEmpty(values)){
+            str.setError("Campo Requerido");
+            str.requestFocus();
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static String getIP(){
+        List<InetAddress> addrs;
+        String address = "";
+        try{
+            List<NetworkInterface> interfaces = Collections.list(NetworkInterface.getNetworkInterfaces());
+            for(NetworkInterface intf : interfaces){
+                addrs = Collections.list(intf.getInetAddresses());
+                for(InetAddress addr : addrs){
+                    if(!addr.isLoopbackAddress() && addr instanceof Inet4Address){
+                        address = addr.getHostAddress().toUpperCase(new Locale("es", "MX"));
+                    }
+                }
+            }
+        }catch (Exception e){
+            Log.w(TAG, "Ex getting IP value " + e.getMessage());
+        }
+        return address;
+    }
+
 }
